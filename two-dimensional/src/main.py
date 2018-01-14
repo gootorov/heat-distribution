@@ -47,7 +47,8 @@ def main():
     # initial distribution
     Z = gaussian(X, Y, time=0.001, conductivity=conductivity)
 
-    # has to be global for the animation to work
+    # matplotlib requires these objects to be global:
+    # https://matplotlib.org/api/animation_api.html#funcanimation
     global fig, ax, graph
     fig = plt.figure()
     ax = plt.axes(projection='3d')

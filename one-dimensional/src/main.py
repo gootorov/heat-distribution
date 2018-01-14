@@ -36,7 +36,8 @@ def main():
     max_plot_boundary = 100
     x = np.linspace(-max_plot_boundary, max_plot_boundary, num=resolution)
 
-    # has to be global for the animation to work
+    # matplotlib requires these objects to be global:
+    # https://matplotlib.org/api/animation_api.html#funcanimation
     global fig, ax, graph
     fig, ax = plt.subplots()
 
